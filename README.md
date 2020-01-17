@@ -5,6 +5,10 @@ A fully functional tiny jit for janet, built using libtcc.
 Functions are jit compiled directly in memory, they are never
 written to disk.
 
+# Install
+
+Requires tiny c compiler and libcc, then 'jpm install' as usual.
+
 # Quick example
 
 ```
