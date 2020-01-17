@@ -4,6 +4,7 @@
 (def myfn (jit/compile `
 
   Janet f(int argc, Janet *argv) {
+    janet_fixarity(argc, 1);
     int i = janet_getinteger(argv, 0);
     return janet_wrap_integer(i+1);
   }
