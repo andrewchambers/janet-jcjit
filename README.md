@@ -35,7 +35,6 @@ Requires tiny c compiler at build time and libtcc at runtime, then 'jpm install'
 - The Janet headers are embedded preprocessed, so they don't use macro versions
   of the janet api.
 
-
 # TODO
 
 - We should deal with the tcc error callbacks properly, instead of just printing
