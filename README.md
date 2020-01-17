@@ -1,6 +1,6 @@
 # janet-jcjit
 
-A jit C compiler for janet, built using libtcc.
+A C extension jit compiler for janet.
 
 Functions are compiled directly in memory, they are never written to disk.
 In fact, jitted functions can be garbage collected.
