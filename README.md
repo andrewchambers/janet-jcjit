@@ -3,6 +3,7 @@
 A jit C compiler for janet, built using libtcc.
 
 Functions are compiled directly in memory, they are never written to disk.
+In fact, jitted functions can be garbage collected.
 
 The janet header is embedded in the binary, so janet headers should not be needed.
 
