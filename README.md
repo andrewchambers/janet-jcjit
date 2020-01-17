@@ -9,7 +9,7 @@ The janet header is embedded in the binary, so janet headers should not be neede
 
 # Install
 
-Requires tiny c compiler at build time and libcc at runtime, then 'jpm install' as usual.
+Requires tiny c compiler at build time and libtcc at runtime, then 'jpm install' as usual.
 
 # Quick example
 
