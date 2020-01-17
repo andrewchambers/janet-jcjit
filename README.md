@@ -40,3 +40,4 @@ Requires tiny c compiler at build time and libtcc at runtime, then 'jpm install'
 - We should deal with the tcc error callbacks properly, instead of just printing
   to stderr.
 - When a jit function is gc'd, we should set the memory to non executable again.
+- Use proper build rules for generated source code.
