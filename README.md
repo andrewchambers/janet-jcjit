@@ -14,7 +14,7 @@ Requires tiny c compiler at build time and libcc at runtime, then 'jpm install' 
 # Quick example
 
 ```
-(import /jcjit :as jit)
+(import jcjit :as jit)
 
 (def myfn 
   (jit/compile `
