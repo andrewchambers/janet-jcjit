@@ -1,13 +1,14 @@
 # janet-jcjit
 
-A fully functional tiny jit for janet, built using libtcc.
+A jit C compiler for janet, built using libtcc.
 
-Functions are jit compiled directly in memory, they are never
-written to disk.
+Functions are compiled directly in memory, they are never written to disk.
+
+The janet header is embedded in the binary, so janet headers should not be needed.
 
 # Install
 
-Requires tiny c compiler and libcc, then 'jpm install' as usual.
+Requires tiny c compiler at build time and libcc at runtime, then 'jpm install' as usual.
 
 # Quick example
 
@@ -26,3 +27,15 @@ Requires tiny c compiler and libcc, then 'jpm install' as usual.
 
 (assert (= (jit/call myfn 3) 4))
 ```
+
+# Limitations
+
+- The Janet headers are embedded preprocessed, so they don't use macro versions
+  of the janet api.
+
+
+# TODO
+
+- We should deal with the tcc error callbacks properly, instead of just printing
+  to stderr.
+- When a jit function is gc'd, we should set the memory to non executable again.
