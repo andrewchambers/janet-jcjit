@@ -21,6 +21,11 @@ static int jitfunc_gc(void *p, size_t s) {
   return 0;
 }
 
+static Janet jitfunc_call(void *p, int32_t argc, Janet *argv) {
+    JitFunc *f = p;
+    return f->f(argc, argv);
+}
+
 static const JanetAbstractType function_type = {"jcjit.function",
                                                 jitfunc_gc,
                                                 NULL,
@@ -30,7 +35,9 @@ static const JanetAbstractType function_type = {"jcjit.function",
                                                 NULL,
                                                 NULL,
                                                 NULL,
-                                                NULL};
+                                                NULL,
+                                                NULL,
+                                                jitfunc_call};
 
 static void finalize_tcc_state(TCCState **s) {
   if (*s)
